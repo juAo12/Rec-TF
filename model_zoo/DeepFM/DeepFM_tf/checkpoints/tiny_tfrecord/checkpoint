@@ -1,0 +1,2 @@
+model_checkpoint_path: "DeepFM_test.model"
+all_model_checkpoint_paths: "DeepFM_test.model"

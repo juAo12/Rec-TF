@@ -1,0 +1,75 @@
+2024-06-12 14:58:36,195 P33603 INFO Params: {
+    "batch_norm": "False",
+    "batch_size": "8",
+    "data_format": "tfrecord",
+    "data_root": "../../../data/",
+    "dataset_id": "tiny_tfrecord",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "4",
+    "embedding_regularizer": "1e-08",
+    "epochs": "1",
+    "eval_steps": "None",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "group_id": "None",
+    "hidden_activations": "relu",
+    "hidden_units": "[64, 32]",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['AUC', 'logloss']",
+    "model": "DeepFM",
+    "model_id": "DeepFM_test",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_dropout": "0",
+    "net_regularizer": "0",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/tiny_tfrecord/test.tfrecord",
+    "train_data": "../../../data/tiny_tfrecord/train.tfrecord",
+    "use_features": "None",
+    "valid_data": "../../../data/tiny_tfrecord/valid.tfrecord",
+    "verbose": "1"
+}
+2024-06-12 14:58:36,195 P33603 INFO Setting random seed=2019
+2024-06-12 14:58:36,195 P33603 INFO Load feature_map from json: ../../../data/tiny_tfrecord/feature_map.json
+2024-06-12 14:58:36,196 P33603 INFO Set column index...
+2024-06-12 14:58:36,196 P33603 INFO Feature specs: {
+    "adgroup_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 95, 'vocab_size': 96}",
+    "age_level": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6, 'vocab_size': 7}",
+    "brand": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 66, 'vocab_size': 67}",
+    "campaign_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 98, 'vocab_size': 99}",
+    "cate_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 48, 'vocab_size': 49}",
+    "cms_group_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "cms_segid": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "customer": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 97, 'vocab_size': 98}",
+    "final_gender_code": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "occupation": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "pid": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "pvalue_level": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "shopping_level": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "userid": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 25, 'vocab_size': 26}"
+}
+2024-06-12 14:58:36,239 P33603 INFO Loading data...
+2024-06-12 14:58:36,239 P33603 INFO Loading train and validation data done.
+2024-06-12 14:58:36,284 P33603 INFO ************ Epoch=1 start ************
+2024-06-12 14:58:38,460 P33603 INFO Train loss: 7.512330
+2024-06-12 14:58:38,460 P33603 INFO Evaluation @epoch 1 - batch 13: 
+2024-06-12 14:58:38,531 P33603 INFO [Metrics] AUC: 0.872396 - logloss: 0.631444
+2024-06-12 14:58:38,531 P33603 INFO Save best model: monitor(max)=0.240952
+2024-06-12 14:58:38,570 P33603 INFO ************ Epoch=1 end ************
+2024-06-12 14:58:38,570 P33603 INFO Training finished.
+2024-06-12 14:58:38,571 P33603 INFO Load best model: /Users/zhihu/Documents/YAcode/Rec-TF/model_zoo/DeepFM/DeepFM_tf/checkpoints/tiny_tfrecord/DeepFM_test.model
+2024-06-12 14:58:38,587 P33603 INFO ****** Validation evaluation ******
+2024-06-12 14:58:38,639 P33603 INFO [Metrics] AUC: 0.872396 - logloss: 0.631444
+2024-06-12 14:58:38,728 P33603 INFO ******** Test evaluation ********
+2024-06-12 14:58:38,729 P33603 INFO Loading data...
+2024-06-12 14:58:38,729 P33603 INFO Loading test data done.
+2024-06-12 14:58:38,804 P33603 INFO [Metrics] AUC: 0.872396 - logloss: 0.631444

@@ -1,0 +1,1 @@
+ 20240612-145838,[command] python /Users/zhihu/Documents/YAcode/Rec-TF/model_zoo/DeepFM/DeepFM_tf/run_expid.py,[exp_id] DeepFM_test,[dataset_id] tiny_tfrecord,[train] N.A.,[val] AUC: 0.872396 - logloss: 0.631444,[test] AUC: 0.872396 - logloss: 0.631444
